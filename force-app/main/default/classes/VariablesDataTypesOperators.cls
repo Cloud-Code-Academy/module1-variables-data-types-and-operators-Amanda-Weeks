@@ -211,11 +211,11 @@ public with sharing class VariablesDataTypesOperators {
      */
     
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-    final Integer MILLISECONDS_PER_MINUTE = 60000; // Constant value
+    final Integer millisecondsPerMinute = 60000; // Constant value
         if (minutes == null) {
             return null;
         } else {
-        return minutes * MILLISECONDS_PER_MINUTE; // Formula that uses the Constant value
+        return minutes * millisecondsPerMinute; // Formula that uses the Constant value
         }    
     }
 
@@ -379,9 +379,9 @@ public with sharing class VariablesDataTypesOperators {
         if (hourlyRate == 0 || numberOfHours == 0) {
             return 0;        
         }
-        final Double WEEKS_PER_MONTH = 4;
+        final Double weeksPerMonth = 4;
         Decimal weeklyPaycheckTotal = hourlyRate * numberOfHours;
-        Decimal monthlyPaycheckTotal = weeklyPaycheckTotal * WEEKS_PER_MONTH;
+        Decimal monthlyPaycheckTotal = weeklyPaycheckTotal * weeksPerMonth;
         return monthlyPaycheckTotal;
     }
 
